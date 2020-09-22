@@ -20,4 +20,12 @@ steps:
   - task: DotNetCoreCLI@2
     inputs:
       command: 'build'
-      projects: 'src/LostAndFound.SharedKernel/LostAndFound.SharedKernel.csproj'
+      projects: |
+        'src/LostAndFound.SharedKernel/LostAndFound.SharedKernel.csproj'
+        'src/LostAndFound.Infrastructure/LostAndFound.Infrastructure.csproj' 
+        'src/LostAndFound.Core/LostAndFound.Core.csproj' 
+        'src/LostAndFound.Web/LostAndFound.Web.csproj' 
+        'tests/LostAndFound.UnitTests/LostAndFound.UnitTests.csproj' 
+        'tests/LostAndFound.IntegrationTestsLostAndFound.IntegrationTests.csproj' 
+        'tests/LostAndFound.FunctionalTests/LostAndFound.FunctionalTests.csproj' 
+        
