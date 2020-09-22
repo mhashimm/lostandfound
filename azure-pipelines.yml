@@ -1,7 +1,7 @@
 # Starter pipeline
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+# https://aka.ms/yaml**/*.csproj
 
 trigger:
   branches:
@@ -20,12 +20,8 @@ steps:
   - task: DotNetCoreCLI@2
     inputs:
       command: 'build'
-      projects: |
-        src/LostAndFound.SharedKernel/LostAndFound.SharedKernel.csproj
-        src/LostAndFound.Infrastructure/LostAndFound.Infrastructure.csproj
-        src/LostAndFound.Core/LostAndFound.Core.csproj
-        src/LostAndFound.Web/LostAndFound.Web.csproj
-        tests/LostAndFound.UnitTests/LostAndFound.UnitTests.csproj
-        tests/LostAndFound.IntegrationTestsLostAndFound.IntegrationTests.csproj
-        tests/LostAndFound.FunctionalTests/LostAndFound.FunctionalTests.csproj
-        
+      projects: 'src/*.csproj'
+  - task: DotNetCoreCLI@2
+    inputs:
+     command: 'test'
+     projects:  'tests/*.csproj'
