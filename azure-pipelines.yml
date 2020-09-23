@@ -17,6 +17,18 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+  #- task: UseDotNet@2
+  #  displayName: 'Use .NET Core SDK 3.1.300'
+  #  inputs:
+  #    packageType: sdk
+  #    version: 3.1.300
+
+  #- task: DotNetCoreCLI@2
+  #  displayName: 'Restore project dependencies'
+  #  inputs:
+  #    command: 'restore'
+  #    projects: '**/*.csproj'
+
   - task: DotNetCoreCLI@2
     inputs:
       command: 'build'
