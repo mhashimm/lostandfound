@@ -1,7 +1,7 @@
 # Starter pipeline
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+# https://aka.ms/yaml**/*.csproj
 
 trigger:
   branches:
@@ -10,13 +10,42 @@ trigger:
   paths:
     exclude:
       - README.md
+      - azure-pipelines.yml
+
 pr: none
+
+variables:
+  # Container registry service connection established during pipeline creation
+  #dockerRegistryServiceConnection: '{{ containerRegistryConnection.Id }}'
+  dockerRegistryServiceConnection: '{{ containerRegistryConnection.Id }}'
+  #imageRepository: '{{#toAlphaNumericString imageRepository 50}}{{/toAlphaNumericString}}'
+  imageRepository: '{{#toAlphaNumericString imageRepository 50}}{{/toAlphaNumericString}}'
+  #containerRegistry: '{{ containerRegistryConnection.Authorization.Parameters.loginServer }}'
+  containerRegistry: '{{ containerRegistryConnection.Authorization.Parameters.loginServer }}'
+  dockerfilePath: '{{ dockerfilePath }}'
+  tag: '$(Build.BuildId)'
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+  #- task: UseDotNet@2
+  #  displayName: 'Use .NET Core SDK 3.1.300'
+  #  inputs:
+  #    packageType: sdk
+  #    version: 3.1.300
+
+  #- task: DotNetCoreCLI@2
+  #  displayName: 'Restore project dependencies'
+  #  inputs:
+  #    command: 'restore'
+  #    projects: '**/*.csproj'
+
   - task: DotNetCoreCLI@2
     inputs:
       command: 'build'
-      projects: 'src/LostAndFound.SharedKernel/LostAndFound.SharedKernel.csproj'
+      projects: 'src/*.csproj'
+  - task: DotNetCoreCLI@2
+    inputs:
+     command: 'test'
+     projects:  'tests/*.csproj'
