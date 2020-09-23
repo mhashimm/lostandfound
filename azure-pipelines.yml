@@ -15,10 +15,10 @@ trigger:
 pr: none
 
 variables:
-  dockerRegistryServiceConnection: '{{ containerRegistryConnection.Id }}'
+  dockerRegistryServiceConnection: dockerRegistryServiceConnection
   imageRepository: '{{mhashim}}{{/private}}'
-  containerRegistry: '{{ containerRegistryConnection.Authorization.Parameters.loginServer }}'
-  dockerfilePath: '{{ dockerfilePath }}'
+  #containerRegistry: '{{ containerRegistryConnection.Authorization.Parameters.loginServer }}'
+  #dockerfilePath: '{{ dockerfilePath }}'
   tag: '$(Build.BuildId)'
 
 pool:
