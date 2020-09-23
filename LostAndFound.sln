@@ -7,19 +7,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C2D77280-AB2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{15413A3F-1F37-4711-9BFA-CD24107C7094}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LostAndFound.Core", "src\LostAndFound.Core\LostAndFound.Core.csproj", "{098B4118-7258-4ED3-84E0-A78FD3E688DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostAndFound.Core", "src\LostAndFound.Core\LostAndFound.Core.csproj", "{098B4118-7258-4ED3-84E0-A78FD3E688DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LostAndFound.Infrastructure", "src\LostAndFound.Infrastructure\LostAndFound.Infrastructure.csproj", "{D1DD817E-FEE9-4321-810D-DAA42CAC3193}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostAndFound.Infrastructure", "src\LostAndFound.Infrastructure\LostAndFound.Infrastructure.csproj", "{D1DD817E-FEE9-4321-810D-DAA42CAC3193}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LostAndFound.SharedKernel", "src\LostAndFound.SharedKernel\LostAndFound.SharedKernel.csproj", "{459C4CDD-AE58-46F5-B5DA-FCFF66DF4DA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostAndFound.SharedKernel", "src\LostAndFound.SharedKernel\LostAndFound.SharedKernel.csproj", "{459C4CDD-AE58-46F5-B5DA-FCFF66DF4DA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LostAndFound.Web", "src\LostAndFound.Web\LostAndFound.Web.csproj", "{625B1F7A-31CC-44ED-ACF6-2750C18C4431}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostAndFound.Web", "src\LostAndFound.Web\LostAndFound.Web.csproj", "{625B1F7A-31CC-44ED-ACF6-2750C18C4431}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LostAndFound.UnitTests", "tests\LostAndFound.UnitTests\LostAndFound.UnitTests.csproj", "{B70AEEC2-2015-4746-94CA-05361FEDF126}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostAndFound.UnitTests", "tests\LostAndFound.UnitTests\LostAndFound.UnitTests.csproj", "{B70AEEC2-2015-4746-94CA-05361FEDF126}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LostAndFound.IntegrationTests", "tests\LostAndFound.IntegrationTests\LostAndFound.IntegrationTests.csproj", "{8D71BC65-531E-4E43-B2AA-BCB36E101E93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostAndFound.IntegrationTests", "tests\LostAndFound.IntegrationTests\LostAndFound.IntegrationTests.csproj", "{8D71BC65-531E-4E43-B2AA-BCB36E101E93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LostAndFound.FunctionalTests", "LostAndFound.FunctionalTests\LostAndFound.FunctionalTests.csproj", "{7AD1E69E-311E-4473-8B2B-E63A3451A76D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LostAndFound.FunctionalTests", "tests\LostAndFound.FunctionalTests\LostAndFound.FunctionalTests.csproj", "{434D92E5-AC44-4163-A750-A88D53E9E7B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +51,10 @@ Global
 		{8D71BC65-531E-4E43-B2AA-BCB36E101E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D71BC65-531E-4E43-B2AA-BCB36E101E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D71BC65-531E-4E43-B2AA-BCB36E101E93}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7AD1E69E-311E-4473-8B2B-E63A3451A76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7AD1E69E-311E-4473-8B2B-E63A3451A76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7AD1E69E-311E-4473-8B2B-E63A3451A76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7AD1E69E-311E-4473-8B2B-E63A3451A76D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{434D92E5-AC44-4163-A750-A88D53E9E7B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{434D92E5-AC44-4163-A750-A88D53E9E7B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{434D92E5-AC44-4163-A750-A88D53E9E7B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{434D92E5-AC44-4163-A750-A88D53E9E7B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,7 +66,7 @@ Global
 		{625B1F7A-31CC-44ED-ACF6-2750C18C4431} = {C2D77280-AB2F-48D5-84BC-1F4F4D34343D}
 		{B70AEEC2-2015-4746-94CA-05361FEDF126} = {15413A3F-1F37-4711-9BFA-CD24107C7094}
 		{8D71BC65-531E-4E43-B2AA-BCB36E101E93} = {15413A3F-1F37-4711-9BFA-CD24107C7094}
-		{7AD1E69E-311E-4473-8B2B-E63A3451A76D} = {15413A3F-1F37-4711-9BFA-CD24107C7094}
+		{434D92E5-AC44-4163-A750-A88D53E9E7B8} = {15413A3F-1F37-4711-9BFA-CD24107C7094}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C8596D8B-593F-4B2B-B26B-17333E582A05}
