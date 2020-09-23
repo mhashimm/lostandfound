@@ -29,7 +29,7 @@ steps:
   displayName: Login to Docker Hub
   inputs:
     command: login
-    containerRegistry: $(dockerRegistryServiceConnection`)
+    containerRegistry: $(dockerRegistryServiceConnection)
 - task: Docker@2
   displayName: Build and Push
   inputs:
