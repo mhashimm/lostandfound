@@ -15,12 +15,8 @@ trigger:
 pr: none
 
 variables:
-  # Container registry service connection established during pipeline creation
-  #dockerRegistryServiceConnection: '{{ containerRegistryConnection.Id }}'
   dockerRegistryServiceConnection: '{{ containerRegistryConnection.Id }}'
-  #imageRepository: '{{#toAlphaNumericString imageRepository 50}}{{/toAlphaNumericString}}'
-  imageRepository: '{{#toAlphaNumericString imageRepository 50}}{{/toAlphaNumericString}}'
-  #containerRegistry: '{{ containerRegistryConnection.Authorization.Parameters.loginServer }}'
+  imageRepository: '{{mhashim}}{{/private}}'
   containerRegistry: '{{ containerRegistryConnection.Authorization.Parameters.loginServer }}'
   dockerfilePath: '{{ dockerfilePath }}'
   tag: '$(Build.BuildId)'
@@ -29,6 +25,19 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: Docker@2
+  displayName: Login to Docker Hub
+  inputs:
+    command: login
+    containerRegistry: $(dockerRegistryServiceConnection`)
+- task: Docker@2
+  displayName: Build and Push
+  inputs:
+    command: buildAndPush
+    repository: $(imageRepository)
+    tags: $(tag)
+  
+
   #- task: UseDotNet@2
   #  displayName: 'Use .NET Core SDK 3.1.300'
   #  inputs:
@@ -41,11 +50,11 @@ steps:
   #    command: 'restore'
   #    projects: '**/*.csproj'
 
-  - task: DotNetCoreCLI@2
-    inputs:
-      command: 'build'
-      projects: 'src/*.csproj'
-  - task: DotNetCoreCLI@2
-    inputs:
-     command: 'test'
-     projects:  'tests/*.csproj'
+  # - task: DotNetCoreCLI@2
+  #   inputs:
+  #     command: 'build'
+  #     projects: 'src/*.csproj'
+  # - task: DotNetCoreCLI@2
+  #   inputs:
+  #    command: 'test'
+  #    projects:  'tests/*.csproj'
