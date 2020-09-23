@@ -11,7 +11,19 @@ trigger:
     exclude:
       - README.md
       - azure-pipelines.yml
+
 pr: none
+
+variables:
+  # Container registry service connection established during pipeline creation
+  #dockerRegistryServiceConnection: '{{ containerRegistryConnection.Id }}'
+  dockerRegistryServiceConnection: '{{ containerRegistryConnection.Id }}'
+  #imageRepository: '{{#toAlphaNumericString imageRepository 50}}{{/toAlphaNumericString}}'
+  imageRepository: '{{#toAlphaNumericString imageRepository 50}}{{/toAlphaNumericString}}'
+  #containerRegistry: '{{ containerRegistryConnection.Authorization.Parameters.loginServer }}'
+  containerRegistry: '{{ containerRegistryConnection.Authorization.Parameters.loginServer }}'
+  dockerfilePath: '{{ dockerfilePath }}'
+  tag: '$(Build.BuildId)'
 
 pool:
   vmImage: 'ubuntu-latest'
