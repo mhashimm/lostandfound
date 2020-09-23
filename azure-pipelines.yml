@@ -16,7 +16,7 @@ pr: none
 
 variables:
   dockerRegistryServiceConnection: dockerRegistryServiceConnection
-  imageRepository: '{{mhashim}}{{/private}}'
+  imageRepository: 'mhashim/private'
   #containerRegistry: '{{ containerRegistryConnection.Authorization.Parameters.loginServer }}'
   #dockerfilePath: '{{ dockerfilePath }}'
   tag: '$(Build.BuildId)'
