@@ -14,6 +14,9 @@ trigger:
 
 pr: none
 
+variables:
+  IMAGE_REPOSITORY: $(imageRepository)
+
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -27,7 +30,7 @@ steps:
   displayName: Build and Push
   inputs:
     command: buildAndPush
-    repository: $(imageRepository)
+    repository: $(IMAGE_REPOSITORY)
     tags: $((Build.BuildId)
   
 
