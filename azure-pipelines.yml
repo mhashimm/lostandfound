@@ -31,7 +31,7 @@ steps:
   inputs:
     command: buildAndPush
     repository: $(IMAGE_REPOSITORY)
-    tags: $((Build.BuildId)
+    tags: $(Build.BuildId)
   
 
   #- task: UseDotNet@2
