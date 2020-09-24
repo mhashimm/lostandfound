@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["src/LostAndFound.Web/LostAndFound.Web.csproj", "src/LostAndFound.Web/"]
+COPY . ./
 RUN dotnet restore "src/LostAndFound.Web/LostAndFound.Web.csproj"
 COPY . .
 WORKDIR "/src/src/LostAndFound.Web"
