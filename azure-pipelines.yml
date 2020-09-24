@@ -14,13 +14,6 @@ trigger:
 
 pr: none
 
-variables:
-  dockerRegistryServiceConnection: dockerRegistryServiceConnection
-  imageRepository: 'mhashim/private'
-  #containerRegistry: '{{ containerRegistryConnection.Authorization.Parameters.loginServer }}'
-  #dockerfilePath: '{{ dockerfilePath }}'
-  tag: '$(Build.BuildId)'
-
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -35,7 +28,7 @@ steps:
   inputs:
     command: buildAndPush
     repository: $(imageRepository)
-    tags: $(tag)
+    tags: $((Build.BuildId)
   
 
   #- task: UseDotNet@2
