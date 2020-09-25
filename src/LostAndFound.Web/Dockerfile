@@ -11,7 +11,6 @@ COPY . ./
 
 RUN dotnet restore "LostAndFound.Web.csproj"
 COPY . .
-RUN ls -R -all
 WORKDIR ./
 RUN dotnet build "LostAndFound.Web.csproj" -c Release -o /app/build
 
