@@ -12,7 +12,7 @@ COPY . ./
 RUN dotnet restore "LostAndFound.Web.csproj"
 COPY . .
 RUN ls -R -all
-WORKDIR "/src/src/LostAndFound.Web"
+WORKDIR ./
 RUN dotnet build "LostAndFound.Web.csproj" -c Release -o /app/build
 
 FROM build AS publish
