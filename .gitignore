@@ -5,6 +5,7 @@
 
 #docker run batch scripts
 docker-run.bat
+docker-compose-local.yml
 
 # User-specific files
 *.rsuser
