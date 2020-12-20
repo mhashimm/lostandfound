@@ -15,7 +15,7 @@ trigger:
 pr: none
 
 variables:
-  IMAGE_REPOSITORY: $(imageRepository)
+  IMAGE_REPOSITORY: $(imageRepository1)
 
 pool:
   vmImage: 'ubuntu-latest'
