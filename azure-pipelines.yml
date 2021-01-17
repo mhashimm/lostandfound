@@ -32,7 +32,9 @@ steps:
     command: buildAndPush
     repository: $(IMAGE_REPOSITORY)
     Dockerfile: Dockerfile
-    tags: $(Build.BuildId)
+    tags: |
+      $(Build.BuildId)
+      latest
   
 
   #- task: UseDotNet@2
