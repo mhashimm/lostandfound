@@ -31,7 +31,7 @@ steps:
   inputs:
     command: buildAndPush
     repository: $(IMAGE_REPOSITORY)
-    Dockerfile: src/LostAndFound.Web/Dockerfile
+    Dockerfile: Dockerfile
     tags: $(Build.BuildId)
   
 
