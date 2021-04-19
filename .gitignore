@@ -3,6 +3,11 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+#docker run batch scripts
+#docker-run.bat
+#docker-compose-local.yml
+#.env.dev
+
 # User-specific files
 *.rsuser
 *.suo
